@@ -1,0 +1,13 @@
+.navbar-brand {
+     margin-top: -8px; !important;
+}
+
+.navbar {
+  background-color: #00529f;
+ }
+
+#navlinks {
+   color: white;
+   font-weight: bold;
+   text-transform: uppercase;
+}
