@@ -1,13 +1,44 @@
-.navbar-brand {
-     margin-top: -8px; !important;
-}
-
 .navbar {
+  position: fixed;
   background-color: #00529f;
+  right: 0px;
+  left:0px;
+  top: 0px;
+  border: 0px;
+  border-radius: 0px;
+  z-index: 1000;
+ }
+
+ .navbar-brand {
+      margin-top: -11px; !important;
  }
 
 #navlinks {
-   color: white;
+   color: #f3f3f3;
    font-weight: bold;
+   font-size: 1.5em;
    text-transform: uppercase;
+}
+
+.fullname {
+ margin-top: 100px;
+}
+
+#myname {
+   font-family: 'Niconne', cursive;
+   font-size: 90px;
+   line-height: 110%;
+}
+
+#specify {
+   font-family: 'Bungee Inline', regular;
+   font-size: 50px;
+   text-transform: uppercase;
+}
+
+.myhr {
+   width: 70%;
+   height: 2px;
+   border: 1px solid black;
+   background: black;
 }
