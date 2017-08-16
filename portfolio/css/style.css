@@ -1,17 +1,29 @@
-.navbar {
-  position: fixed;
-  background-color: #00529f;
-  right: 0px;
-  left:0px;
-  top: 0px;
-  border: 0px;
-  border-radius: 0px;
-  z-index: 1000;
- }
+body {
+   background-image: url('../imgs/goh-rhy-yan-284169.jpg');
+   background-size: cover;
+   background-position: center;
+   background-attachment: local;
+}
 
- .navbar-brand {
-      margin-top: -11px; !important;
- }
+html {
+   height: 200%;
+}
+
+.navbar {
+   position: fixed;
+   background-color: #00529f;
+   right: 0px;
+   left: 0px;
+   top: 0px;
+   border: 0px;
+   border-radius: 0px;
+   z-index: 1000;
+}
+
+.navbar-brand {
+   margin-top: -11px;
+   !important;
+}
 
 #navlinks {
    color: #f3f3f3;
@@ -21,24 +33,44 @@
 }
 
 .fullname {
- margin-top: 100px;
+   margin-top: 4%;
 }
 
 #myname {
    font-family: 'Niconne', cursive;
    font-size: 90px;
    line-height: 110%;
-}
+   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+0px 18px 23px rgba(0, 0, 0, 0.1);
+   }
+
+
 
 #specify {
    font-family: 'Bungee Inline', regular;
-   font-size: 50px;
+   font-size: 40px;
    text-transform: uppercase;
+   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
 .myhr {
-   width: 70%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   width: 40%;
    height: 2px;
-   border: 1px solid black;
-   background: black;
+   border-top: 1px solid #f8f8f8;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+   color: #f3f3f3;
+   background-color: #00529f;
+   border-radius: 10px;
+   /*bottom: 0;*/
+   width: 25%;
+   margin-left: auto;
+   margin-right: auto;
 }
