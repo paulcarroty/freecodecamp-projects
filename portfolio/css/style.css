@@ -33,6 +33,7 @@ html {
    padding: 5px;
 }
 
+
 .navlinks {
    color: #f3f3f3 !important;
    font-weight: bold;
@@ -80,6 +81,10 @@ html {
    border: 1px dashed blue;
 }
 
+
+
+
+
 .footer {
    position: absolute;
    color: #f3f3f3;
@@ -126,4 +131,13 @@ html {
  top: 50%;
  transform: translateY(-50%);
  margin-bottom: 0px;
+}
+
+.row-projects {
+   margin-top: 75vh;
+
+}
+.projects {
+   /*width: 150px;*/
+   /*height: 150px;*/
 }
