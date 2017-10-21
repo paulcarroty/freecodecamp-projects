@@ -138,6 +138,19 @@ html {
    margin-top: 75vh;
 }
 
+.bottom-right {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, 160%);
+   color: #f3f3f3;
+   background-color: #00529f;
+   font-size: 15px;
+   font-family: 'Fira Mono', monospace;
+   border-radius: 5px;
+}
+
+
 .projects {
    /*width: 150px;*/
    /*height: 150px;*/
