@@ -33,11 +33,20 @@ html {
    padding: 5px;
 }
 
+.navbar-brand:hover {
+   background-color: #f3f3f3 !important;
+}
+
 .navlinks {
    color: #f3f3f3 !important;
    font-weight: bold;
    font-size: 1.5em;
    text-transform: uppercase;
+}
+
+.navlinks:hover {
+   background-color: #f3f3f3 !important;
+   color: #00529f !important;
 }
 
 .fullname {
@@ -63,9 +72,13 @@ html {
 
 .myhr {
    margin: 1px auto 1px auto;
-   width: 40%;
+   width: 50%;
    border-top: 2px solid #f8f8f8;
    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.myhr2 {
+   margin-top: 30px;
 }
 
 .skills {
@@ -81,11 +94,11 @@ html {
 }
 
 .projects {
-   border: 1px dashed blue;
+   /*border: 1px dashed blue;*/
 }
 
 .projects-imgs {
-   border: 4px solid white;
+   border: 4px solid #f9bf11;
    border-radius: 15px;
 }
 
@@ -138,7 +151,7 @@ html {
    margin-top: 75vh;
 }
 
-.bottom-right {
+.bottom-center {
    position: absolute;
    top: 50%;
    left: 50%;
@@ -150,8 +163,46 @@ html {
    border-radius: 5px;
 }
 
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+form input, form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: 'Fira Mono', monospace;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
 
-.projects {
-   /*width: 150px;*/
-   /*height: 150px;*/
+form input:focus, form textarea:focus {
+  -moz-box-shadow: 0 0px 4px #f9bf11 !important;
+  -webkit-box-shadow: 0 0px 4px #f9bf11 !important;
+  box-shadow: 0 0px 4px #f9bf11 !important;
+}
+form #input-submit {
+  color: white;
+  background: #00529f;
+  cursor: pointer;
+}
+
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  background-color: #f3f3f3;
+  color: #00529f;
+}
+form textarea {
+   height: 110px;
 }

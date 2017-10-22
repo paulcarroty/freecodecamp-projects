@@ -9,7 +9,6 @@
    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <link rel="stylesheet" href="css/style.css">
-   <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
 
    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Niconne|Syncopate:700|Fira+Mono:500" rel="stylesheet">
 
@@ -45,9 +44,9 @@
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                   <ul class="nav navbar-nav navbar-right">
-                     <li><a class="navlinks" href="#">About</a></li>
-                     <li><a class="navlinks" href="#">Portfolio</a></li>
-                     <li><a class="navlinks" href="#">Contact</a></li>
+                     <li><a class="navlinks" href="#home">About</a></li>
+                     <li><a class="navlinks" href="#portfolio">Portfolio</a></li>
+                     <li><a class="navlinks" href="#contact">Contact</a></li>
                   </ul>
                </div>
                <!-- /.navbar-collapse -->
@@ -56,7 +55,7 @@
          </nav>
       </div>
 
-      <div class="row center-block">
+      <div class="row center-block" id="home">
          <div class="fullname col-xs-12 text-center">
             <h1 id="myname">Pavlo Rudyi</h1>
             <hr class="myhr">
@@ -90,25 +89,25 @@
          </div>
       </div>
 
-
+      <section id="portfolio">
       <div class="row row-projects">
 
          <div class="projects col-xs-12 col-sm-6 col-md-3 text-center">
-            <a href="https://unitedrpms.github.io"><img class="projects-imgs" src="imgs/unitedrpms.png" height="120" alt="">
-               <div class="bottom-right">UnitedRPMs</div>
+            <a href="https://unitedrpms.github.io" target="_blank"><img class="projects-imgs" src="imgs/unitedrpms.png" height="120" alt="">
+               <div class="bottom-center">UnitedRPMs</div>
             </a>
 
          </div>
 
          <div class="projects col-xs-12 col-sm-6 col-md-3 text-center">
-            <a href="https://gitlab.com/paulcarroty/atom-rpm-deb-mirror"><img src="imgs/atom.gif" class="projects-imgs" height="120" alt="">
-               <div class="bottom-right">Atom Repo</div>
+            <a href="https://gitlab.com/paulcarroty/atom-rpm-deb-mirror" target="_blank"><img src="imgs/atom.gif" class="projects-imgs" height="120" alt="">
+               <div class="bottom-center">Atom Repo</div>
             </a>
          </div>
 
          <div class="projects col-xs-12 col-sm-6 col-md-3 text-center">
-            <a href="https://rawgit.com/paulcarroty/freecodecamp-projects/master/tribute/index.html"><img class="projects-imgs" src="imgs/stallman.jpg" height="120" alt="The Tribute">
-               <div class="bottom-right">Tribute</div>
+            <a href="https://rawgit.com/paulcarroty/freecodecamp-projects/master/tribute/index.html" target="_blank"><img class="projects-imgs" src="imgs/stallman.jpg" height="120" alt="The Tribute">
+               <div class="bottom-center">Tribute</div>
             </a>
          </div>
 
@@ -116,23 +115,43 @@
 
          </div>
       </div>
+      </section>
 
-      <div class="row row-projects2">
-         <div class="projects col-xs-12 col-sm-6 col-md-3 text-center">
+
+      <hr class="myhr myhr2">
+
+      <section id=contact>
+
+      <div class="row row-contacts">
+         <div class="contact col-sm-3">
          </div>
 
-         <div class="projects col-xs-12 col-sm-6 col-md-3 text-center">
+         <div class="contact col-xs-12 col-sm-3 col-sm-offset-3">
+            <form class="cf">
+               <input type="text" id="input-name" name="name" placeholder="Name">
+               <input type="email" id="input-email" name="mail" placeholder="Email address">
+               <input type="text" id="input-subject" placeholder="Subject">
+            </form>
          </div>
 
 
+
+         <div class="contact col-xs-12 col-sm-3">
+            <form class="cf"  action="mailto:paulcarroty@riseup.net?subject=portfolio_form_submission" method="post" enctype="text/plain" >
+               <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+               <input type="submit" value="Submit" id="input-submit">
+            </form>
+         </div>
       </div>
+      </section>
+
+
    </div>
 
 
    <footer class="footer container-fluid">
 
       <div class="row row-equal">
-         <!-- sm2 sm2 sm4 sm2 sm2 -->
 
          <div class="col-xs-6 col-sm-2 text-center">
             <a href="https://github.com/paulcarroty" target="_blank"><i class="fa fa-github-square fa-4x fa-fw socials"></i></a>
