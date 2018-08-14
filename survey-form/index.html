@@ -9,51 +9,95 @@
 </head>
 
 <body>
-    <h1 id="title">Survey Form</h1>
-    <h3 id="description">Help us to make FreeCodeCamp better!</h3>
+    <div id="header">
+        <h1 id="title">Survey Form</h1>
+        <h3 id="description">Help us to make FreeCodeCamp better!</h3>
+    </div>
 
-    <form id="survey-form">
-        <label for="name" id="name-label"><span class="warning">*</span>Name:</label>
-        <input type="text" id="name" placeholder=" Enter your name" autofocus required>
-        <label for="email" id="email-label"><span class="warning">*</span>@:</label>
-        <input type="email" id="email" placeholder=" Enter your email" required>
-        <label for="number" id="number-label"><span class="warning">*</span>Age:</label>
-        <input type="number" id="number" placeholder="Age" min="1" max="125" required>
+    <div id=container>
 
-        <label for="dropdown">Who you are now?</label>
-        <select id="dropdown" name="position">
-         <option disabled value>Select an option</option>
+        <div id="leftd">
+            <form id="survey-form">
+                <ul>
+                    <li><label for="name" id="name-label"><span class="warning">*</span>Name:  </label>
+                        <input type="text" id="name" placeholder=" Enter your name" autofocus required>
+                    </li>
+                    <li>
+                        <p></p>
+                    </li>
+                    <li><label for="email" id="email-label"><span class="warning">*</span>E-mail:</label>
+                        <input type="email" id="email" placeholder=" Enter your email" required>
+                    </li>
+                    <li>
+                        <p></p>
+                    </li>
+                    <li><label for="number" id="number-label"><span class="warning">*</span>Age:</label>
+                        <input type="number" id="number" placeholder="Age" min="1" max="125" required>
+                    </li>
+                    <li>
+                        <p></p>
+                    </li>
+                </ul>
+
+
+                <ul>
+                    <li>
+                        <p></p>
+                    </li>
+                    <li><label for="dropdown">Who you are now?</label></li>
+                    <li><select id="dropdown" name="position">
+         <option disabled selected value>Select an option</option>
          <option value="Student">Student</option>   
          <option value="job">Full Time Job</option>   
          <option value="learner">Full Time Learner</option>
          <option value="preferNo">Prefer not to say</option>
          <option value="other">Other</option>   
-        </select>
+        </select></li>
 
-        <label for="userRating"><span class="warning">*</span> Will you recommend the FreeCodeCamp to a friend?</label>
-        <ul style="list-style: none;" id="userRating">
-            <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
-            <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
-            <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
-        </ul>
+                </ul>
 
-        <label for="dropdown2">What is the best in FreeCodeCamp?</label>
-        <select id="dropdown2" name="thebest">
+            </form>
+        </div>
+
+
+
+
+        <div id="rightd">
+            <form id="survey-form2">
+
+                <ul id="userRating">
+                    <li><label for="userRating"><span class="warning">*</span> Will you recommend the FreeCodeCamp to a friend?</label>
+                    </li>
+                    <li class="radio"><label><input name="radio-buttons" value="1"  type="radio" class="userRatings" >Definitely</label></li>
+                    <li class="radio"><label><input name="radio-buttons" value="2"  type="radio" class="userRatings" >Maybe</label></li>
+                    <li class="radio"><label><input name="radio-buttons" value="3"  type="radio" class="userRatings" >Not sure</label></li>
+                </ul>
+
+                <ul>
+                    <li><label for="dropdown2">What is the best in FreeCodeCamp?</label></li>
+                    <li><select id="dropdown2" name="thebest">
          <option disabled value>Select an option</option>
          <option value="opensource">Open Source</option>   
          <option value="free">Free Content</option>   
          <option value="comminity">Community</option>
          <option value="challenges">Challenges</option>
          <option value="forum">Forum</option>   
-        </select>
+        </select></li>
+                </ul>
 
 
+                <ul>
+                    <li> <label for="comments">Any Comments or Suggestions?</label></li>
+                    <li><textarea id="comments" class="input-field" style="height:100px; resize:vertical;" name="comment" placeholder="Enter your comment..."></textarea>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
 
-        <label for="comments">Any Comments or Suggestions?</label>
-        <textarea id="comments" class="input-field" style="height:100px;resize:vertical;" name="comment" placeholder="Enter your comment..."></textarea>
-
-    </form>
+    <footer id="footer">
+        <h2>Thank you for your time!</h2>
+    </footer>
 </body>
 
 </html>
-<link rel="stylesheet" href="">
