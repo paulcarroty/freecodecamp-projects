@@ -7,3 +7,16 @@
 body {
     background-color: #f3f3f3;
 }
+
+#header {
+    position: fixed;
+    height: 200px;
+}
+
+#header-img {
+    height: 200px;
+}
+
+#message {
+    margin-top: 300px;
+}
