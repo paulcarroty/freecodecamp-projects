@@ -47,6 +47,26 @@ nav {
     margin-top: 300px;
 }
 
+#models {
+    
+}
+
 #video {
+    width: 100%;
+    display: flex;
     margin-top: 500px;
+    
+}
+
+.car_video {
+    flex: 1 1 25%;
+    text-align: center; 
+}
+
+#green {
+    
+}
+
+#pricing{
+    
 }
