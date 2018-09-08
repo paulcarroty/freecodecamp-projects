@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+video {
+    width: 100% !important;
+    transform: translateY(-50%);
+}
+
 a {
     color: #000;
     text-decoration: none;
@@ -28,7 +33,7 @@ body {
 }
 
 .logo {
-      width: 50vw;
+    width: 50vw;
 }
 
 nav {
@@ -43,30 +48,26 @@ nav {
 
 
 #message {
-    
+
     margin-top: 300px;
 }
 
-#models {
-    
-}
+#models {}
 
 #video {
     width: 100%;
     display: flex;
     margin-top: 500px;
-    
+
 }
 
 .car_video {
     flex: 1 1 25%;
-    text-align: center; 
+    text-align: center;
 }
 
-#green {
-    
-}
+#green {}
 
-#pricing{
-    
-}
+#pricing {}
+
+video {}
