@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    }
 
 video {
     width: 100% !important;
@@ -16,6 +16,7 @@ a {
 
 body {
     background-color: #f3f3f3;
+    background: url(https://wallpapersite.com/images/wallpapers/tesla-roadster-1920x1080-2020-hd-4k-11244.jpeg) top no-repeat, url(https://www.tesla.com/tesla_theme/js/app/EnergyHomePage/6e29318d1ccb1cdfeca86b23ff74999a.jpg) top left no-repeat, url(https://www.tesla.com/sites/default/files/images/presskit/press_solar_roof.jpg), url(https://www.tesla.com/sites/default/files/images/presskit/press_powerwall2.jpg?2017);
 }
 
 #header {
@@ -26,7 +27,9 @@ body {
     align-items: center;
     height: 70px;
     width: 100%;
+    background-color: #212a35;
 }
+
 
 #header-img {
     height: 70px;
@@ -41,24 +44,25 @@ nav {
     font-size: 30px;
 }
 
+nav > a {
+    color: #f3f3f3 !important;
+}
+
+
 .nav-link {
     padding-right: 25px;
 }
 
 
-
 #message {
-
     margin-top: 300px;
 }
-
-#models {}
 
 #video {
     width: 100%;
     display: flex;
-    margin-top: 500px;
-
+    margin-top: 15vh;
+    flex-wrap: wrap;
 }
 
 .car_video {
@@ -66,8 +70,69 @@ nav {
     text-align: center;
 }
 
-#green {}
+#models {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 95vh;
+}
 
-#pricing {}
+.model-specs {
+    flex: 1 4 23%;
+    margin: 10px;
+    min-width: 300px;
+    max-width: 300px;
+    text-align: center;
+    justify-content: center;
+    border: 5px solid #625D5D;
+    border-radius: 25px;
+    height: 276px;
+    background-color: #cdd1d4;
+}
 
-video {}
+
+#green {
+    margin-top: 10vh;
+    text-align: center;
+
+}
+
+#g_header > h1 {
+    color: #f3f3f3 !important;
+    text-transform: uppercase;
+}
+
+#green {
+    margin-bottom: 20vh;
+}
+
+.g_energy {
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-top: 10vh;
+    margin-left: 5vh;
+    color: #f3f3f3 !important;
+    font-size: 18px;
+}
+
+
+#footer {
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: transparent;
+}
+footer > a {
+        color: #f3f3f3 !important;
+    font-size: 16px;
+}
+
+footer > img {
+    vertical-align: middle;
+}
