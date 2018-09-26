@@ -5,6 +5,16 @@
 }
 
 
+nav>ul,
+a>li {
+
+    list-style: none;
+    color: #000;
+}
+
+nav>ul>a {
+    text-decoration: none;
+}
 
 #container {
     display: flex;
@@ -14,16 +24,15 @@
 #left-side {
     flex: 1 1 280px;
     background-color: #f7df1e;
+    padding: 10px;
 }
 
-#left-side>a {
-    text-decoration: node;
-}
 
-#navbar>li {
-    list-style: none;
-}
+
+
 
 #right-side {
     flex: 4 1 70%;
     border: 4px solid black;
+    padding: 10px 10px 10px 25px;
+}
