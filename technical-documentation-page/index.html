@@ -15,56 +15,60 @@
 <body>
   <div id="container">
     <div id="left-side">
-      <header>
-        <p>JavaScript Documentation</p>
-      </header>
-      <nav id="navbar">
-        <ul>
-          <a class="nav-link" href="#Introduction" rel="internal">
-            <li>Introduction</li>
-          </a>
-          <a class="nav-link" href="#What_you_should_already_know" rel="internal">
-            <li>What you should already know</li>
-          </a>
-          <a class="nav-link" href="#JavaScript_and_Java" rel="internal">
-            <li>JavaScript and Java</li>
-          </a>
-          <a class="nav-link" href="#Hello_world" rel="internal">
-            <li>Hello world</li>
-          </a>
-          <a class="nav-link" href="#Variables" rel="internal">
-            <li>Variables</li>
-          </a>
-          <a class="nav-link" href="#Declaring_variables" rel="internal">
-            <li>Declaring variables</li>
-          </a>
-          <a class="nav-link" href="#Variable_scope" rel="internal">
-            <li>Variable scope</li>
-          </a>
-          <a class="nav-link" href="#Global_variables" rel="internal">
-            <li>Global variables</li>
-          </a>
-          <a class="nav-link" href="#Constants" rel="internal">
-            <li>Constants</li>
-          </a>
-          <a class="nav-link" href="#Data_types" rel="internal">
-            <li>Data types</li>
-          </a>
-          <a class="nav-link" href="#if...else_statement" rel="internal">
-            <li>if...else statement</li>
-          </a>
-          <a class="nav-link" href="#while_statement" rel="internal">
-            <li>while statement</li>
-          </a>
-          <a class="nav-link" href="#Function_declarations" rel="internal">
-            <li>Function declarations</li>
-          </a>
-          <a class="nav-link" href="#Reference" rel="internal">
-            <li>Reference</li>
-          </a>
-        </ul>
+      <div id=scroll_locker>
+        <header>
+          <p>JavaScript</p>
+          <p>Documentation</p>
+        </header>
+        <nav id="navbar">
+          <ul>
+            <a class="nav-link" href="#Introduction" rel="internal">
+              <li>Introduction</li>
+            </a>
+            <a class="nav-link" href="#What_you_should_already_know" rel="internal">
+              <li>What you should already know</li>
+            </a>
+            <a class="nav-link" href="#JavaScript_and_Java" rel="internal">
+              <li>JavaScript and Java</li>
+            </a>
+            <a class="nav-link" href="#Hello_world" rel="internal">
+              <li>Hello world</li>
+            </a>
+            <a class="nav-link" href="#Variables" rel="internal">
+              <li>Variables</li>
+            </a>
+            <a class="nav-link" href="#Declaring_variables" rel="internal">
+              <li>Declaring variables</li>
+            </a>
+            <a class="nav-link" href="#Variable_scope" rel="internal">
+              <li>Variable scope</li>
+            </a>
+            <a class="nav-link" href="#Global_variables" rel="internal">
+              <li>Global variables</li>
+            </a>
+            <a class="nav-link" href="#Constants" rel="internal">
+              <li>Constants</li>
+            </a>
+            <a class="nav-link" href="#Data_types" rel="internal">
+              <li>Data types</li>
+            </a>
+            <a class="nav-link" href="#if...else_statement" rel="internal">
+              <li>if...else statement</li>
+            </a>
+            <a class="nav-link" href="#while_statement" rel="internal">
+              <li>while statement</li>
+            </a>
+            <a class="nav-link" href="#Function_declarations" rel="internal">
+              <li>Function declarations</li>
+            </a>
+            <a class="nav-link" href="#Reference" rel="internal">
+              <li>Reference</li>
+            </a>
+          </ul>
 
-      </nav>
+        </nav>
+      </div>
+
     </div>
 
 
@@ -128,10 +132,10 @@
             To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript
             code:
             <code>function greetMe(yourName) {
-              alert("Hello " + yourName);
-              }
-              greetMe("World");
-            </code>
+  alert("Hello " + yourName);
+      }
+            
+greetMe("World");</code>
 
             Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
           </article>
@@ -184,17 +188,17 @@
               within a block is local to the function (or global scope) that the block resides within. For example the
               following code will log 5, because the scope of x is the function (or global context) within which x is
               declared, not the block, which in this case is an if statement.</p>
-            <code>if (true) {
-              var x = 5;
-              }
-              console.log(x); // 5</code>
+            <code>if(true) {
+            var x = 5;
+         }
+         console.log(x); // 5</code>
             <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
 
             <code>if (true) {
-              let y = 5;
-              }
-              console.log(y);
-              // ReferenceError: y is not defined</code>
+            let y = 5;
+          }
+          console.log(y);
+// ReferenceError: y is not defined</code>
           </article>
         </section>
         <section class="main-section" id="Global_variables">
@@ -226,17 +230,17 @@
               example:</p>
 
             <code>// THIS WILL CAUSE AN ERROR
-              function f() {};
+            function f() {};
               const f = 5;
-              // THIS WILL CAUSE AN ERROR ALSO
-              function f() {
+// THIS WILL CAUSE AN ERROR ALSO
+            function f() {
               const g = 5;
               var g;
               //statements
-              }</code>
+            }</code>
             However, object attributes are not protected, so the following statement is executed without problems.
             <code>const MY_OBJECT = {"key": "value"};
-              MY_OBJECT.key = "otherValue";</code>
+MY_OBJECT.key = "otherValue";</code>
           </article>
         </section>
         <section class="main-section" id="Data_types">
@@ -293,11 +297,11 @@
             good practice to always use block statements, especially when nesting if statements:
 
             <code>if (condition) {
-              statement_1_runs_if_condition_is_true;
-              statement_2_runs_if_condition_is_true;
+  statement_1_runs_if_condition_is_true;
+  statement_2_runs_if_condition_is_true;
               } else {
-              statement_3_runs_if_condition_is_false;
-              statement_4_runs_if_condition_is_false;
+  statement_3_runs_if_condition_is_false;
+  statement_4_runs_if_condition_is_false;
               }</code>
             It is advisable to not use simple assignments in a conditional expression, because the assignment can be
             confused with equality when glancing over the code. For example, do not use the following code:
@@ -334,14 +338,15 @@
             <p>The following while loop iterates as long as n is less than three:</p>
 
             <code>var n = 0;
-              var x = 0;
-              while (n < 3) { n++; x +=n; }</code> <p>With each iteration, the loop increments n and adds that value to
-                x. Therefore, x and n take on the following values:</p>
+var x = 0;
+while (n < 3) { n++; x +=n; }</code>
+            <p>With each iteration, the loop increments n and adds that value to
+              x. Therefore, x and n take on the following values:</p>
 
-                <li>After the first pass: n = 1 and x = 1</li>
-                <li>After the second pass: n = 2 and x = 3</li>
-                <li>After the third pass: n = 3 and x = 6</li>
-                <p>After completing the third pass, the condition n &lt 3 is no longer true, so the loop terminates.</p>
+            <li>After the first pass: n = 1 and x = 1</li>
+            <li>After the second pass: n = 2 and x = 3</li>
+            <li>After the third pass: n = 3 and x = 6</li>
+            <p>After completing the third pass, the condition n &lt 3 is no longer true, so the loop terminates.</p>
           </article>
         </section>
         <section class="main-section" id="Function_declarations">

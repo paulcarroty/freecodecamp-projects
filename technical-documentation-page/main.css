@@ -1,68 +1,94 @@
 @font-face {
-    font-family: 'Fira Code';
-    src: url(https://unpkg.com/firacode/distr/woff/FiraCode-Light.woff);
+  font-family: "Fira Code";
+  src: url(https://unpkg.com/firacode/distr/woff/FiraCode-Light.woff);
+}
+html,
+body {
+  overflow: hidden;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header>p {
-    font-family: 'Philosopher', sans-serif;
-    font-size: 50px;
-    text-transform: capitalize;
+header > p {
+  font-family: "Philosopher", sans-serif;
+  font-size: 50px;
+  text-transform: capitalize;
 }
 
-nav>ul,
-a>li {
-
-    list-style: none;
-    color: #000;
+nav > ul,
+a > li {
+  list-style: none;
+  color: #000;
 }
 
-nav>ul>a {
-    text-decoration: none;
-    font-family: 'Merriweather', serif;
-    font-size: 24px;
-    line-height: 1.5;
+.main-section article li {
+  margin-left: 20px;
+}
+
+nav > ul > a {
+  text-decoration: none;
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  line-height: 1.5;
 }
 
 #container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
 }
 
 #left-side {
-    flex: 1 1 280px;
-    background-color: #f7df1e;
-    padding: 0px 10px 10px 10px;
+  flex: 1 0 200px;
+  /* max-width: 355px; */
+  background-color: #f7df1e;
+  padding: 0px 10px 10px 10px;
+  overflow: hidden;
 }
-
-
-
-
 
 #right-side {
-    flex: 4 1 70%;
-    border: 4px solid black;
-    padding: 10px 10px 10px 25px;
-    font-family: 'Fira Sans Condensed', sans-serif;
-    font-size: 20px;
-    color: #f3f3f3;
-    background-color: #001f3f;
-    line-height: 1.8;
+  flex: 5 0 250px;
+  /* min-width: 255px; */
+  padding: 10px 10px 10px 25px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 20px;
+  color: #f3f3f3;
+  background-color: #001f3f;
+  line-height: 1.8;
+  overflow: scroll;
 }
 
-.main-section>header {
-    font-family: 'Fira Sans Condensed:700', sans-serif;
-    font-size: 30px;
+#main-doc {
+  height: 10vh;
+}
+
+#scroll-locker {
+  position: fixed !important;
+  overflow-y: unset;
+}
+
+.main-section > header {
+  font-family: "Fira Sans Condensed:700", sans-serif;
+  font-size: 30px;
 }
 
 code {
-    font-family: 'Fira Code';
-    font-size: 20px;
-    background-color: #DDDDDD;
-    color: #000;
+  font-family: "Fira Code";
+  font-size: 20px;
+  background-color: #dddddd;
+  color: #000;
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: break-word;
+  line-height: 0.9;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 10px;
 }
