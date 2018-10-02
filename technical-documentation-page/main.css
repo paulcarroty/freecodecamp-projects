@@ -2,9 +2,33 @@
   font-family: "Fira Code";
   src: url(https://unpkg.com/firacode/distr/woff/FiraCode-Light.woff);
 }
-html,
-body {
-  overflow: hidden;
+
+@media only screen and (max-width: 500px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  #scrolltotop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+
+  #left-side,
+  body {
+    overflow: hidden;
+  }
+  #right-side {
+    height: 100%;
+  }
 }
 
 * {
@@ -43,11 +67,11 @@ nav > ul > a {
 }
 
 #left-side {
-  flex: 1 0 200px;
+  flex: 1 0 250px;
+  height: 100%;
   /* max-width: 355px; */
   background-color: #f7df1e;
   padding: 0px 10px 10px 10px;
-  overflow: hidden;
 }
 
 #right-side {
@@ -64,11 +88,6 @@ nav > ul > a {
 
 #main-doc {
   height: 10vh;
-}
-
-#scroll-locker {
-  position: fixed !important;
-  overflow-y: unset;
 }
 
 .main-section > header {
@@ -91,4 +110,11 @@ code {
   padding: 4px;
   margin: 4px;
   border-radius: 10px;
+}
+
+#scrolltotop {
+  /* display: none; */
+  position: absolute;
+  bottom: 1px;
+  right: 15px;
 }
