@@ -113,7 +113,6 @@ code {
 }
 
 #scrolltotop {
-  /* display: none; */
   position: absolute;
   bottom: 1px;
   right: 15px;
