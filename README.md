@@ -6,6 +6,6 @@ The frontend projects from [Freecodecamp](https://www.freecodecamp.org)
 *  [Survey Form](https://rawgit.com/paulcarroty/freecodecamp-projects/master/survey-form/index.html)
 *  [Landing Page](https://rawgit.com/paulcarroty/freecodecamp-projects/master/landing-page/index.html)
 *  [Technical Documentation Page](https://rawgit.com/paulcarroty/freecodecamp-projects/master/technical-documentation-page/index.html)
-*   Random Quote Machine
+*   [Random Quote Machine](https://rawcdn.githack.com/paulcarroty/freecodecamp-projects/46d42001d12ccba336e3df094778d6f74da249ad/random-quote-machine/index.html)
 *   Wikipedia Viewer
 *   Twitch.tv JSON API
