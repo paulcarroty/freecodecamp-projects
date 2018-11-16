@@ -7,5 +7,6 @@ The frontend projects from [Freecodecamp](https://www.freecodecamp.org)
 *  [Landing Page](https://rawgit.com/paulcarroty/freecodecamp-projects/master/landing-page/index.html)
 *  [Technical Documentation Page](https://rawgit.com/paulcarroty/freecodecamp-projects/master/technical-documentation-page/index.html)
 *   [Random Quote Machine](https://rawcdn.githack.com/paulcarroty/freecodecamp-projects/46d42001d12ccba336e3df094778d6f74da249ad/random-quote-machine/index.html)
+* [JavaScript Calculator](https://calm-wave-88195.herokuapp.com/)
 *   Wikipedia Viewer
 *   Twitch.tv JSON API
