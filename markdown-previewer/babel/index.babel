@@ -1,0 +1,65 @@
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      markdown: ''
+    }
+
+    this.changeText = this.changeText.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      markdown: `# Welcome!
+
+## Markdown is funny!
+
+You can easily create **bold** and *italic* words!
+
+### Want a list? No problemo!
+
+1. One
+2. Two
+* Three
+
+![Image](https://media.giphy.com/media/uos5sW7pBy5W0/giphy.gif)
+
+Coded with ❤ & ☕ by [@ paulcarroty](https://github.com/paulcarroty)`
+    })
+
+  }
+
+  changeText(event) {
+    this.setState({
+      markdown: event.target.value
+    })
+
+  }
+
+  render() {
+
+    return (
+      <div className="container">
+        <div id="markdown">
+          <textarea name="" id="textarea" cols="30" rows="10" onChange={this.changeText} value={this.state.markdown}></textarea>
+        </div>
+
+        <div id="middle">
+
+        </div>
+
+
+        <div id="render" dangerouslySetInnerHTML={{__html: marked(this.state.markdown)}} >
+        </div>
+
+        </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+

@@ -1,0 +1,138 @@
+
+
+/** Regular */
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+body {
+  padding: 0;
+  font-family: "San Francisco";
+  font-size: 16px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+}
+
+
+.container {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#markdown {
+  display: flex;
+  margin-top: 0;
+}
+
+textarea {
+  margin: 0;
+  width: 25vw;
+  height: 80vh;
+  padding: 10px;
+  font-size: 1.2em;
+  border-top: 10px solid rgb(88, 86, 214);
+  border-bottom: 10px solid rgb(88, 86, 214);
+  border-left: 10px solid rgb(88, 86, 214);
+  border-radius: 25px 0 0 25px;
+  line-height: 101%;
+
+}
+
+
+#render {
+  margin-top: 0px;
+  padding: 10px;
+  width: 25vw;
+  height: 80vh;
+  overflow-y: auto;
+  border-top: 10px solid rgb(88, 86, 214);
+  border-bottom: 10px solid rgb(88, 86, 214);
+  border-right: 10px solid rgb(88, 86, 214);
+  border-radius: 0 25px 25px 0;
+  line-height: 99%;
+}
+
+
+
+#middle {
+  margin-top: 10px;
+  height: calc(80vh + 2*20px);
+  width: 10px;
+  background: rgb(255, 204, 0);
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  left: calc(50%-5px);
+}
