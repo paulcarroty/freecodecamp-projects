@@ -1,0 +1,79 @@
+
+let Calc = (props) => {
+        const infList = props.infList;
+        const listItems = infList.map((number) => {
+
+ let revenue = Math.floor((1 - number / 100) * props.deposit * (1 + 0.805 * props.percent / (100 * 12)) ** props.time);
+
+          if(props.deposit > 0){
+  return revenue > props.deposit ?
+  <p key = { number.toString() } >Inflation 🡓{ number}%: <span className="Green"><strong>{ revenue }</strong></span></p> 
+                 :
+revenue == 0 || revenue == undefined ?
+
+ <p key = { number.toString() }> Inflation 🡓{ number } % : <span className="Hide"><strong>{ revenue }</strong></span> < /p> 
+       :
+ <p key = { number.toString() } > Inflation 🡓{ number}%: <span className="Red"><strong>{ revenue }</strong></span> </p>
+
+}
+
+    });
+    return (
+        <ul>{listItems}</ul>
+    )
+
+}
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { deposit: '', time: '', percent: '' };
+        this.handleDepChange = this.handleDepChange.bind(this);
+        this.handleTimeChange = this.handleTimeChange.bind(this);
+        this.handlePercChange = this.handlePercChange.bind(this);
+    }
+    handleDepChange(event) {
+        this.setState({ deposit: event.target.value });
+    }
+    handleTimeChange(event) {
+        this.setState({ time: event.target.value });
+    }
+    handlePercChange(event) {
+        this.setState({ percent: event.target.value });
+    }
+    render() {
+        return (<div>
+
+      <div>
+      <header className="App-header">
+          <p>
+            You want to calculate possible inflation risks for your deposits? Here we go!
+          </p>
+      </header>
+      </div>
+
+
+         <div className="Deposit">
+          <ul>
+          <li><p>I want to make a deposit: <input type="number" value={this.state.deposit} onChange={this.handleDepChange} placeholder="1000"></input></p></li>
+          <li><p>For a time in months: <input type="number" value={this.state.time} onChange={this.handleTimeChange} placeholder="6"></input></p></li>
+          <li><p>With percent: <input type="number" step="0.01" value={this.state.percent} onChange={this.handlePercChange} placeholder="14.5"></input></p></li>
+          </ul>
+      </div>
+
+    <div className="Revenue">
+    <h3>Revenue</h3>
+
+    <Calc deposit={this.state.deposit} percent={this.state.percent} time={this.state.time} infList={[...Array(21).keys()]} />
+
+
+    </div>
+
+      </div>)
+    }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
