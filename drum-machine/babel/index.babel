@@ -1,0 +1,157 @@
+function Square(props) {
+  return (
+    <button className="Square" id={props.value} onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
+}
+
+function Controls(props) {
+  return (
+    <div id="keys">
+      <p>{props.keys}</p>
+    </div>
+  );
+}
+
+class Surface extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      keys: [],
+      volume: 100
+    };
+    this.handleRealKeyPress = this.handleRealKeyPress.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleRealKeyPress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleRealKeyPress);
+  }
+
+  handleRealKeyPress(e) {
+    if ([81, 87, 69, 65, 83, 68, 90, 88, 67].includes(e.keyCode)) {
+      let idName = this.props.keymap.find(el => el.keycode === e.keyCode)
+        .letter;
+      let button = document.getElementById(idName);
+      button.click();
+    }
+  }
+
+  handleChange(event) {
+    this.setState({ volume: event.target.value });
+  }
+
+  handleClick(i) {
+    const elementData = this.props.keymap.find(e => e.letter === i);
+    const { id, url } = elementData;
+    this.setState({ keys: id });
+    const sound = new Audio(url);
+    sound.volume = this.state.volume / 100;
+    sound.play();
+  }
+
+  renderSquare(i) {
+    return <Square onClick={() => this.handleClick(i)} value={i} />;
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="App-root">
+          <h2 id="title">DRUM MACHINE</h2>
+
+          <div className="row-buttons">
+            {this.renderSquare("q")}
+            {this.renderSquare("w")}
+            {this.renderSquare("e")}
+          </div>
+          <div className="row-buttons">
+            {this.renderSquare("a")}
+            {this.renderSquare("s")}
+            {this.renderSquare("d")}
+          </div>
+          <div className="row-buttons">
+            {this.renderSquare("z")}
+            {this.renderSquare("x")}
+            {this.renderSquare("c")}
+          </div>
+          <div id="controls">
+            <Controls keys={this.state.keys} />
+            <div id="keys">
+              <input
+                value={this.state.volume}
+                type="range"
+                min="1"
+                max="100"
+                onChange={this.handleChange.bind(this)}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+const keymap = [
+  {
+    letter: "q",
+    keycode: 81,
+    id: "Open-HH",
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
+  },
+  {
+    letter: "w",
+    keycode: 87,
+    id: "Closed-HH",
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
+  },
+  {
+    letter: "e",
+    keycode: 69,
+    id: "Kick-and-Hat",
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
+  },
+  {
+    letter: "a",
+    keycode: 65,
+    id: "Punchy-Kick",
+    url: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
+  },
+  {
+    letter: "s",
+    keycode: 83,
+    id: "Kick",
+    url: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
+  },
+  {
+    letter: "d",
+    keycode: 68,
+    id: "Snare",
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
+  },
+  {
+    letter: "z",
+    keycode: 90,
+    id: "Side-Stick",
+    url: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
+  },
+  {
+    letter: "x",
+    keycode: 88,
+    id: "Clap",
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"
+  },
+  {
+    letter: "c",
+    keycode: 67,
+    id: "Shaker",
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3"
+  }
+];
+
+ReactDOM.render(<Surface keymap={keymap} />, document.getElementById("root"));

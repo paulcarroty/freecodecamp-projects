@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Niramit:500,700");
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #222233;
+  min-height: 30vh;
+  min-width: 30vw;
+  font-size: calc(10px + 2vmin);
+  color: #f3f3f3;
+  border-bottom-left-radius: 10rem;
+  border-top-right-radius: 10rem;
+  box-shadow: 2px 2px 2px #000000, 0px 0px 2px #0d0d0d;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#title {
+  margin-top: 10px;
+  font-family: "Niramit:700", sans-serif;
+}
+
+.Square {
+  background: radial-gradient(#d3d3d3, #2d3436);
+  border: 2px solid #d3d3d3;
+  border-radius: 50%;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  height: 120px;
+  width: 120px;
+  margin: 10px 10px 10px 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.Square:active {
+  background: radial-gradient(#ffc500, #c21500);
+  border: 2px solid #ffc500;
+  outline: none;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+#keys {
+  display: flex;
+  width: 15vw;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5vw;
+}
+
+#keys > p {
+  color: #f3f3f3;
+  background: #222233;
+  font-family: "Niramit:500", sans-serif;
+}
+
+#volume {
+  display: flex;
+  width: 15vw;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5vw;
+  cursor: pointer;
+}
+
+#volume > input {
+  cursor: pointer;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
