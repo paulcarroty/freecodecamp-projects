@@ -1,0 +1,158 @@
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      work: 25,
+      pause: 5,
+      timeLeft: 25,
+      timeLeftView: "",
+      isRunning: false
+    };
+  }
+
+  handlePlay = () => {
+    this.setState({ isRunning: true });
+    document.getElementById("timecount").style.visibility = "visible";
+    document.getElementById("timeLeftText").textContent =
+      "Start your tasks now!";
+    document.getElementById("timeLeftText").style.color = "#f3f3f3";
+
+    // ternary operator detects runned timers vs restored from pause
+    let time =
+      this.state.timeLeft < this.state.work
+        ? { ...this.state }.timeLeft
+        : { ...this.state }.timeLeft + { ...this.state }.pause;
+
+    //there's two iterators -time and tv
+    // time iterate over whole interval include pause, tV shows only work time
+    let timer = setInterval(() => {
+      time--;
+      let pausetime = { ...this.state }.pause;
+      let sec, min, tV;
+      if (time > pausetime) {
+        sec = (time - pausetime) % 60;
+        min = 0;
+        // alert(min);
+        tV = min > 0 ? `${min}m${sec}s` : `${sec}s`;
+      } else if (time <= pausetime) {
+        sec = time % 60;
+        min = 0;
+        tV = min > 0 ? `${min}m${sec}s` : `${sec}s`;
+      }
+
+      this.setState({ timeLeft: time, timeLeftView: tV });
+      console.log(this.state);
+
+      if (time === { ...this.state }.pause) {
+        document.getElementById("timeLeftText").textContent = "Relaxing time!";
+        document.getElementById("timeLeftText").style.color = "rgb(50,215,75)";
+      } else if (this.state.isRunning === false) {
+        clearInterval(timer);
+        // document.getElementById("reset").click()
+      } else if (time <= 0) {
+        clearInterval(timer);
+        document.getElementById("reset").click();
+      }
+    }, 1000);
+  };
+
+  handlePause() {
+    this.setState({ isRunning: false });
+  }
+
+  handleReset = () => {
+    document.getElementById("timecount").style.visibility = "hidden";
+    this.setState({
+      work: 25,
+      pause: 5,
+      timeLeft: 25,
+      timeLeftView: "",
+      isRunning: false
+    });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header" id="appheader">
+          <p>
+            <button
+              id="leftWork"
+              onClick={() => {
+                let nW = this.state.work;
+                nW--;
+                if (nW > 0) {
+                  this.setState({ work: nW, timeLeft: nW });
+                }
+              }}
+            >
+              ⬅
+            </button>
+            &nbsp;Work interval <span id="work">{this.state.work}</span>m &nbsp;
+            <button
+              id="rightWork"
+              onClick={() => {
+                let nW = this.state.work;
+                nW++;
+                this.setState({ work: nW });
+                this.setState({ timeLeft: nW });
+              }}
+            >
+              ➡
+            </button>
+          </p>
+          <p style={{ visibility: "hidden" }} id="timecount">
+            {" "}
+            <span id="timeLeftText">Start your tasks now!</span>{" "}
+            <span id="timeLeft">{this.state.timeLeftView}</span> left
+          </p>
+          <h2>POMODORO</h2>
+
+          <p>
+            <button id="play" onClick={() => this.handlePlay()}>
+              ▶
+            </button>
+            &nbsp;
+            <button id="pauseButton" onClick={() => this.handlePause()}>
+              ⏸
+            </button>
+            &nbsp;
+            <button id="reset" onClick={() => this.handleReset()}>
+              ⏹
+            </button>
+          </p>
+
+          <p>
+            <button
+              id="leftPause"
+              onClick={() => {
+                let nW = this.state.pause;
+                if (nW > 0) {
+                  this.setState({ pause: --nW });
+                }
+              }}
+            >
+              ⬅
+            </button>
+            &nbsp;Pause time <span id="pause">{this.state.pause}</span>m&nbsp;
+            <button
+              id="rightPause"
+              onClick={() => {
+                let nW = this.state.pause;
+                this.setState({ pause: ++nW });
+              }}
+            >
+              ➡
+            </button>
+          </p>
+        </header>
+      </div>
+    );
+  }
+}
+
+
+
+ReactDOM.render(<App />, document.getElementById("root"));
