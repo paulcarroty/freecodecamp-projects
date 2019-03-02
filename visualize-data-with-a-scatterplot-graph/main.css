@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Kodchasan:700|Mina");
+
+* {
+  box-sizing: border-box;
+}
+
+#title,
+#graph {
+  text-align: center;
+}
+
+h2,
+h6 {
+  font-family: "Kodchasan", sans-serif;
+}
+
+p {
+  font-family: "Mina", sans-serif;
+}
