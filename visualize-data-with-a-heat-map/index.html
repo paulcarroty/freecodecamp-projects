@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <title>Visualize Data with a Heat Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title">
+        <h2>Monthly Global Land-Surface Temperature</h2>
+        <h6>1753 - 2015: base temperature 8.66℃</h6>
+      </div>
+
+      <div id="graph"></div>
+
+      <div id="subtitle">
+        Variance: <spawn style="background-color:rgb(49, 54, 149);">2.8</spawn>
+        <spawn style="background-color:rgb(69, 117, 180);">3.9</spawn>
+        <spawn style="background-color:rgb(116, 173, 209);">5.0</spawn>
+        <spawn style="background-color:rgb(171, 217, 233);">6.1</spawn>
+        <spawn style="background-color:rgb(224, 243, 248);">7.2</spawn>
+        <spawn style="background-color:rgb(255, 255, 191);">8.3</spawn>
+        <spawn style="background-color:rgb(254, 224, 144);">9.5</spawn>
+        <spawn style="background-color:rgb(253, 174, 97);">10.6</spawn>
+        <spawn style="background-color:rgb(244, 109, 67);">11.7</spawn>
+        <spawn style="background-color:rgb(215, 48, 39);">12.8</spawn>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

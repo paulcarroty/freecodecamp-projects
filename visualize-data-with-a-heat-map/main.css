@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Niramit|Noto+Sans+SC:500");
+* {
+  box-sizing: border-box;
+}
+
+#title,
+#graph,
+#subtitle {
+  text-align: center;
+}
+
+h2,
+h6 {
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+p,
+#subtitle {
+  font-family: "Niramit", sans-serif;
+}
