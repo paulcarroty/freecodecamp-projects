@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Literata";
+  src: url("fonts/literata-regular.otf");
+}
+
+@font-face {
+  font-family: "Literata";
+  src: url("fonts/literata-bold.otf");
+  font-weight: bold;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: Literata, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#chart {
+  position: absolute;
+  margin: -45px auto auto;
+  -web-margin-after: 45px;
+  padding: 1em;
+  background-color: #b2cecf;
+  zoom: 0.85;
+  transform: scale(0.8);
+  box-shadow: 0.3em 0.4em 0.5em #333;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: #333;
+  margin: 0;
+  font-family: Literata, sans-serif;
+}
+
+.tick text,
+.tick,
+line {
+  fill: #000;
+  stroke: #333;
+  font-family: Literata, sans-serif;
+}
+
+#tooltip {
+  opacity: 0;
+  position: absolute;
+  padding: 0.5em;
+  border: 0.1em solid #003366;
+  border-radius: 0.5em;
+  font-style: italic;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.county,
+.state,
+.country {
+  stroke: #003366;
+  stroke-width: 0.5;
+}
+
+.county:hover {
+  stroke-width: 4;
+}
+
+.state,
+.country {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+#description {
+  font-style: italic;
+  line-height: 50%;
+}
