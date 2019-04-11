@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Bookerly";
+  src: url("fonts/Bookerly-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Bookerly";
+  src: url("fonts/Bookerly-RegularItalic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Bookerly";
+  src: url("fonts/Bookerly-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Bookerly";
+  src: url("Bookerly-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bookerly";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+ul li {
+  display: inline-block;
+  padding: 15px;
+  cursor: pointer;
+  align-self: stretch;
+  transition: 0.5s ease;
+  color: #f3f3f3;
+  background-color: hsl(240, 55.7%, 25.7%);
+}
+
+ul li:hover {
+  background-color: #f3f3f3;
+  color: hsl(240, 55.7%, 25.7%);
+}
+
+ul li:not(:last-child) {
+  border-right: 1px solid #f3f3f3;
+}
+
+ul li:nth-child(1) {
+  border-bottom-left-radius: 10%;
+}
+
+ul li:nth-child(3) {
+  border-bottom-right-radius: 10%;
+}
+
+#tooltip {
+  position: absolute;
+  background-color: rgb(255, 45, 85);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.tile {
+  overflow: hidden;
+  stroke: #f3f3f3;
+}
+
+.tileText {
+  font-size: 6px;
+}
+
+#title {
+  margin-top: 5px;
+}
+
+#description {
+  font-weight: bold;
+  font-style: italic;
+  margin: 8px;
+}
