@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+#container {
+  margin: 25px 20% 20%;
+  padding: 20px;
+  color: #001f3f;
+  background-color: #7fdbff;
+  border-radius: 1%;
+  height: 150%;
+}
+
+hr {
+  color: #111111;
+  background-color: #111111;
+}
+
+h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+input,
+#result {
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+#testui {
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+}
+
+code {
+  font-family: Hack, monospace;
+  width: 40%;
+}
+
+#userstories {
+  font-family: "Lato", sans-serif;
+}
+
+#result {
+  font-style: italic;
+}
